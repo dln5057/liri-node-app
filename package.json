@@ -1,0 +1,18 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keys.js",
+  "dependencies": {
+    "omdb-api-client": "^2.0.1",
+    "spotify": "^0.3.0",
+    "spotify-web-api-node": "^2.3.5",
+    "twitter": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
