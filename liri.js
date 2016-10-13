@@ -3,25 +3,30 @@ var request = require('request');
 var keys = require('./keys.js');
 
 var action = process.argv[2];
-// function run(action){
+var arg2 = process.argv[3];
+
+function run(action, arg2){
   switch(action){
     case 'my-tweets':
           tweets();
       break;
 
       case 'spotify-this-song':
-          spotify();
+          spotify(arg2);
       break;
 
       case 'movie-this':
-          movie();
+          movie(arg2);
       break;
 
       case 'do-what-it-says':
           doIt();
       break;
   }
-// }
+}
+
+run(action, arg2);
+
 function tweets(){
   var Twitter = require('twitter');
   var client = new Twitter({
@@ -46,14 +51,14 @@ function tweets(){
   });
 }
 
-function spotify(){
+function spotify(arg2){
   var SpotifyWebApi = require('spotify-web-api-node');
   var spotifyApi = new SpotifyWebApi({
   clientId : keys.spotifyKeys.clientId,
   clientSecret : keys.spotifyKeys.clientSecret,
   redirectUri : keys.spotifyKeys.redirectUri
   });
-  var songName = process.argv;
+  var songName = arg2;
   var songTrack =  "";
   for(var i = 3; i < songName.length; i++){
     songTrack = songTrack + " " + songName[i];
@@ -70,10 +75,10 @@ function spotify(){
   });
 }
 
-function movie(){
+function movie(arg2){
   var APIClinet = require('omdb-api-client');
   var omdb = new APIClinet();
-  var action = process.argv[3];
+  var action = arg2;
   var queryUrl = 'http://www.omdbapi.com/?t=' + action +'&y=&plot=short&r=json';
   request(queryUrl, function (error, response, body) {
     if (!error && response.statusCode == 200) {
@@ -92,18 +97,7 @@ function movie(){
 
 function doIt(){
   fs.readFile("random.txt", "utf8", function(error, data) {
-    console.log(data);
-
-    var dataArr = data.split(', ');
-
-    console.log(dataArr)
-
-    for(var i =0; i < dataArr.length; i++){
-      console.log(dataArr[i]);
-
-      action = dataArr[i];
-
-    
-    }
+    data = data.split(',');
+    run(data[0], data[1]);
   });
 }
