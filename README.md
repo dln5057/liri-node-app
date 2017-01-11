@@ -4,6 +4,7 @@
 
 ## Functionality
 
+***
 ## Screenshots of App
 
 ### Calling the `node liri.js my-tweets` command, it will load the last 20 tweets/retweets 
