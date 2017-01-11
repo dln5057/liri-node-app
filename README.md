@@ -5,5 +5,14 @@
 ## Functionality
 
 ## Screenshots of App
-### The main `/articles` page is where the articles are found. 
+
+### Calling the `node liri.js my-tweets` command, it will load the last 20 tweets/retweets 
 ![Tweets](./screenShots/tweets.JPG)
+
+### Calling the node liri.js spotify-this-song '<song name here>'
+### This displays:
+* Artist Name
+* Album Name
+* Song Name
+* Preview Link
+![Spotify](./screenShots/Spotify.JPG)
