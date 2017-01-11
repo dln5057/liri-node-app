@@ -59,10 +59,10 @@ function spotify(arg2){
   redirectUri : keys.spotifyKeys.redirectUri
   });
   var songName = arg2;
-  var songTrack ="";
-  for(var i = 3; i < songName.length; i++){
-    songTrack = songTrack + " " + songName[i];
-  }
+  var songTrack =  "";
+  // for(var i = 0; i < songName.length; i++){
+    songTrack = songName;
+  // }
   console.log("This is the full song " + songTrack);
   spotifyApi.searchTracks(songTrack).then(function(data) {
     // console.log('Search by ' + songName, data.body);
@@ -78,6 +78,7 @@ function spotify(arg2){
 function movie(arg2){
   var APIClinet = require('omdb-api-client');
   var omdb = new APIClinet();
+
   var action = arg2;
   var queryUrl = 'http://www.omdbapi.com/?t=' + action +'&y=&plot=short&r=json';
   request(queryUrl, function (error, response, body) {
