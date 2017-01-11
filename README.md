@@ -31,4 +31,4 @@
 ![omdb](./screenShots/omdb.JPG)
 
 ### Calling the `node liri.js do-what-it-says` will take the command in the `random.txt` and call the command in the data. In this case the `random.txt` contains the command `"spotify-this-song,"I Want it That Way""`
-![Do_it](./screenShots/Do-it.JPG)
+![Do_it](./screenShots/Do-It.JPG)
