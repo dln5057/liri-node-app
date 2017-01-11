@@ -9,8 +9,8 @@
 ### Calling the `node liri.js my-tweets` command, it will load the last 20 tweets/retweets 
 ![Tweets](./screenShots/tweets.JPG)
 
-### Calling the node liri.js spotify-this-song '<song name here>'
-### This displays:
+### Calling the `node liri.js spotify-this-song '<song name here>'`
+#### This displays:
 * Artist Name
 * Album Name
 * Song Name
