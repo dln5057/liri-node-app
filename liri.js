@@ -60,9 +60,7 @@ function spotify(arg2){
   });
   var songName = arg2;
   var songTrack =  "";
-  // for(var i = 0; i < songName.length; i++){
-    songTrack = songName;
-  // }
+  songTrack = songName;
   console.log("This is the full song " + songTrack);
   spotifyApi.searchTracks(songTrack).then(function(data) {
     // console.log('Search by ' + songName, data.body);
