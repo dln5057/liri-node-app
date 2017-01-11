@@ -59,7 +59,7 @@ function spotify(arg2){
   redirectUri : keys.spotifyKeys.redirectUri
   });
   var songName = arg2;
-  var songTrack =  "";
+  var songTrack ="";
   for(var i = 3; i < songName.length; i++){
     songTrack = songTrack + " " + songName[i];
   }
